@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/filter.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="landing is-preload">
@@ -74,17 +75,22 @@
 				<section id="six" class="wrapper style6 special">
 					<div class="inner">
 						<header class="major">
-							<h2>Github Repository Examples</h2>
+							<h2>Project Filters</h2>
 						</header>
-						<ul class="actions stacked">
-							<li><a href="https://github.com/GeorgeSHumphreys" class="button fit primary">Github</a></li>
+						<ul class="actions" id="buttonFilterContainer">
+							<li><a class="button fit filterMode all primary" >All Projects</a></li>
+							<li><a class="button fit filterMode uni">University Projects</a></li>
+							<li><a class="button fit filterMode gamej">Game Jams</a></li>
+							<li><a class="button fit filterMode personal">Personal Games</a></li>
+							<li><a class="button fit filterMode gapi">Graphics API's</a></li>
 						</ul>
 					</div>
 				</section>
 				
 
 				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
+				
+					<section id="two" class="wrapper alt style2 filterDiv gamej">
 						<section class="spotlight">
 							<div class="image"><img src="images/pic01.png" alt="" /></div><div class="content">
 								<h2>YA3WWOG</h2>
@@ -93,14 +99,14 @@
 							</div>
 						</section>
 					</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic02.png" alt="" /></div><div class="content">
-								<h2>Memory Lock</h2>
-								<p>After the UKIE Games Jam, we decided to try and expand on the 3D Puzzler style and add some more features during the Global Game Jam 2020. This became Memory Lock!</p>
-								<a href = "https://globalgamejam.org/2021/games/memory-lock-7">GGJ page link</a>
-							</div>
-						</section>
-					<section id="two" class="wrapper alt style2">
+					<section class="spotlight filterDiv gamej">
+						<div class="image"><img src="images/pic02.png" alt="" /></div><div class="content">
+							<h2>Memory Lock</h2>
+							<p>After the UKIE Games Jam, we decided to try and expand on the 3D Puzzler style and add some more features during the Global Game Jam 2020. This became Memory Lock!</p>
+							<a href = "https://globalgamejam.org/2021/games/memory-lock-7">GGJ page link</a>
+						</div>
+					</section>
+					<section id="two" class="wrapper alt style2 filterDiv uni gapi">
 						<section class="spotlight">
 							<div class="video left"><video playsinline autoplay muted loop width="760" height="405"><source src = "videos/Pacman Gameplay.mp4"></div><div class="content">
 								<h2>S2D Pacman Recreation</h2>
@@ -109,13 +115,13 @@
 							</div>
 						</section>
 					</section>
-					<section class="spotlight">
+					<section class="spotlight filterDiv gapi">
 						<div class="image"><video playsinline autoplay muted loop width="760" height="405"><source src = "videos/PortalDemo.mp4"></video></div><div class="content">
 							<h2>OpenGL Portal Demo</h2>
 							<p>Whilst learning the OpenGL framework, I decided to look through shaders and the OpenGL Pipeline. Using the knowledge I had learnt, I decided to write a Portal Shader using OpenGL.</p>
 						</div>
 					</section>
-					<section id="two" class="wrapper alt style2">
+					<section id="two" class="wrapper alt style2 filterDiv personal">
 						<section class="spotlight">
 							<div class="video left"><video playsinline autoplay muted loop width="760" height="405"><source src = "videos/BlastTracksTrailer.mp4"></video></div><div class="content">
 								<h2>BlastTracks - A VR Rhythm Game</h2>
@@ -125,14 +131,14 @@
 							</div>
 						</section>
 					</section>
-					<section class="spotlight">
+					<section class="spotlight filterDiv uni gapi">
 						<div class="video"><video playsinline autoplay muted loop width="760" height="405"><source src = "videos/BombDrop gameplay.mp4"></video></div><div class="content">
 							<h2>BombDrop - Basic OpenGL PVP Game</h2>
 							<p>As a part of my studies, I was required to make a basic game using a basic OpenGL framework. From what started as a recreation of a classic show called Bamzooki called StaffZooki, the game turned into a 1v1 Tank based game, where the goal is to stay alive on the platform!</p>
 							<p>The game includes Collision, Lighting, A Heads-Up-Display, Basic Physics and 3d Models!</p>
 						</div>
 					</section>
-					<section id="two" class="wrapper alt style2">
+					<section id="two" class="wrapper alt style2 filterDiv personal">
 						<section class="spotlight">
 							<div class="image left"><img src="images/SlimeImage.png" alt="" /></div><div class="content">
 								<h2>Multiplayer Mobile Party Game</h2>
@@ -175,6 +181,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src ="assets/js/filterMain.js"></script>
 	</body>
 </html>
