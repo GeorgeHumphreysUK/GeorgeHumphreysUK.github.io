@@ -8,13 +8,20 @@ function ApplyFilter(filter)
     {
         filter = "";
     }
-
+    var total = 0;
     for(var i = 0; i < entries.length; i++)
     {
+        HideElement(entries[i], "rev");
         HideElement(entries[i], "show");
+        
         if(entries[i].className.indexOf(filter) > -1)
         {
             ShowElement(entries[i], "show");
+            if(total % 2 == 1)
+            {
+                entries[i].className += " rev";
+            }
+            total++;
         }
     }
 }
@@ -31,6 +38,7 @@ function ShowElement(element, name)
             element.className += " " + arr2[i];
         }
     }
+    
 }
 
 
@@ -46,6 +54,7 @@ function HideElement(element, name)
         }
     }
     element.className = arr1.join(" ");
+    
 }
 
 
@@ -60,4 +69,14 @@ for(var i = 0; i < buttons.length; i++)
         var arr1 = this.className.split(" ");
         ApplyFilter(arr1[arr1.indexOf("filterMode") + 1]);
     })
+}
+
+var entries = document.getElementsByClassName("filterDiv");
+for(var i = 0; i < entries.length; i++)
+{
+    if(i % 2 == 1)
+    {
+        console.log(i);
+        entries[i].className += " rev";
+    }
 }

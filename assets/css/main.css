@@ -2718,6 +2718,12 @@ input, select, textarea {
 		display: -ms-flex;
 		display: flex;
 	}
+		.spotlight.rev {
+			-moz-flex-direction: row-reverse;
+			-webkit-flex-direction: row-reverse;
+			-ms-flex-direction: row-reverse;
+			flex-direction: row-reverse;
+		}
 
 		.spotlight .image {
 			-moz-order: 1;
@@ -2744,10 +2750,7 @@ input, select, textarea {
 		}
 
 		.spotlight:nth-child(2n) {
-			-moz-flex-direction: row-reverse;
-			-webkit-flex-direction: row-reverse;
-			-ms-flex-direction: row-reverse;
-			flex-direction: row-reverse;
+			
 		}
 
 		.spotlight:nth-child(1) {
@@ -2832,6 +2835,9 @@ input, select, textarea {
 			}
 
 		}
+
+		
+	
 
 /* Wrapper */
 
