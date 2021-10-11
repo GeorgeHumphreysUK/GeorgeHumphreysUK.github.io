@@ -2135,6 +2135,22 @@ input, select, textarea {
 			};
 	}
 
+/* video */
+	.video{
+		border-radius: 3px;
+		border: 0;
+		display: inline-block;
+		position: relative;
+	}
+	.video.fit {
+		display: block;
+		margin: 0 0 2em 0;
+		width: 100%;
+	}
+		.video.fit video{
+			width: 100%;
+		}
+
 
 /* Image */
 
@@ -2739,6 +2755,18 @@ input, select, textarea {
 				width: 100%;
 			}
 
+		.spotlight .video{
+			-moz-order: 1;
+			-webkit-order: 1;
+			-ms-order: 1;
+			order: 1;
+			border-radius: 0;
+			width: 40%;
+		}
+			.spotlight .video video{
+				border-radius: 0;
+				width: 100%;
+			}
 		.spotlight .content {
 			padding: 2em 4em 0.1em 4em ;
 			-moz-order: 2;
@@ -2799,6 +2827,10 @@ input, select, textarea {
 				width: 45%;
 			}
 
+			.spotlight .video {
+				width:45%;
+			}
+
 			.spotlight .content {
 				width: 55%;
 			}
@@ -2817,6 +2849,10 @@ input, select, textarea {
 
 				.spotlight .image {
 					width: 100%;
+				}
+
+				.spotlight .video{
+					width:100%;
 				}
 
 				.spotlight .content {
