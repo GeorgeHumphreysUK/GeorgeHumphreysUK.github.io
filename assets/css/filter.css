@@ -7,3 +7,10 @@
 {
     display:flex;
 }
+
+@media screen and (max-width: 980px) {
+
+    .show {
+        display: block;
+    }
+}
